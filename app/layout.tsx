@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
@@ -7,9 +7,17 @@ import StructuredData from '@/components/StructuredData';
 import { siteConfig } from '@/lib/seo';
 
 const inter = Inter({ subsets: ['latin'] });
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || siteConfig.url;
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#0284c7',
+};
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(siteUrl),
+  applicationName: siteConfig.shortName,
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`
@@ -18,16 +26,21 @@ export const metadata: Metadata = {
   keywords: siteConfig.keywords,
   authors: [{ name: siteConfig.author }],
   creator: siteConfig.author,
+  icons: {
+    icon: '/logo.svg',
+    shortcut: '/logo.svg',
+    apple: '/logo.svg',
+  },
   openGraph: {
     type: 'website',
     locale: siteConfig.locale,
-    url: siteConfig.url,
+    url: siteUrl,
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
     images: [
       {
-        url: siteConfig.ogImage,
+        url: '/og-image.svg',
         width: 1200,
         height: 630,
         alt: siteConfig.name
@@ -38,7 +51,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [siteConfig.ogImage]
+    images: ['/og-image.svg']
   },
   robots: {
     index: true,
@@ -51,11 +64,14 @@ export const metadata: Metadata = {
       'max-snippet': -1
     }
   },
-  verification: {
-    google: '', // Add Google Search Console verification code here
-  },
   alternates: {
-    canonical: siteConfig.url
+    canonical: siteUrl
+  },
+  other: {
+    'geo.region': 'MA-CAS',
+    'geo.placename': 'Casablanca',
+    'geo.position': '33.594152;-7.620405',
+    ICBM: '33.594152, -7.620405',
   }
 };
 
@@ -66,15 +82,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <head>
-        <StructuredData />
-        <link rel="icon" href="/logo.svg" />
-        <meta name="geo.region" content="MA-CAS" />
-        <meta name="geo.placename" content="Casablanca" />
-        <meta name="geo.position" content="33.594152;-7.620405" />
-        <meta name="ICBM" content="33.594152, -7.620405" />
-      </head>
       <body className={inter.className}>
+        <StructuredData />
         <Header />
         <main className="min-h-screen">
           {children}
