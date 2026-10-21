@@ -261,7 +261,7 @@ vercel
 Variables d'environnement (créer `.env.local`):
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://www.orthophonistecasablanca.ma
+NEXT_PUBLIC_SITE_URL=https://www.orthophonistecentreville.com
 NEXT_PUBLIC_GOOGLE_PLACE_ID=ChIJ... (à récupérer)
 RESEND_API_KEY=re_... (pour emails)
 NEXT_PUBLIC_GA_ID=G-... (Analytics)
@@ -359,7 +359,7 @@ NEXT_PUBLIC_GA_ID=G-... (Analytics)
 - Tailwind: [tailwindcss.com/docs](https://tailwindcss.com/docs)
 
 **Contact Projet:**
-- Email: contact@orthophonistecasablanca.ma
+- Email: contact@orthophonistecentreville.com
 - Téléphone: 0654 18 28 04
 
 ---

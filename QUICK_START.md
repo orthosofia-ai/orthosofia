@@ -31,7 +31,7 @@ Ouvrez votre navigateur: **http://localhost:3000**
 
 ```typescript
 phone: '0654182804',        // Votre numéro
-email: 'contact@orthophonistecasablanca.ma', // Votre email
+email: 'contact@orthophonistecentreville.com', // Votre email
 ```
 
 ### Ajouter Vos Photos
@@ -184,5 +184,5 @@ Votre site est **100% fonctionnel** et prêt à l'emploi.
 
 ## 🎉 Bon Lancement!
 
-Pour toute question: **contact@orthophonistecasablanca.ma** ou **0654 18 28 04**
+Pour toute question: **contact@orthophonistecentreville.com** ou **0654 18 28 04**
 

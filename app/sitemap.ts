@@ -9,7 +9,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/prises-en-charge',
     '/questions-conseils',
     '/temoignages',
+    '/blog',
     '/contact',
+    '/mentions-legales',
+    '/politique-confidentialite',
   ].map((route) => ({
     url: `${siteConfig.url}${route}`,
     lastModified: new Date(),

@@ -5,11 +5,11 @@ import Hero from '@/components/sections/Hero';
 import CTASection from '@/components/sections/CTASection';
 
 export const metadata: Metadata = {
-  title: 'Le Cabinet - Orthophonie Casablanca',
-  description: 'Découvrez notre cabinet pluridisciplinaire à Casablanca. Une équipe dévouée, des locaux modernes et une approche personnalisée pour chaque patient.',
+  title: "Le Cabinet - Cabinet d'orthophonie Centre ville",
+  description: 'Découvrez notre cabinet d’orthophonie Centre ville à Casablanca. Une équipe dévouée, des locaux modernes et une approche personnalisée pour chaque patient.',
   openGraph: {
-    title: 'Le Cabinet - Orthophonie Casablanca',
-    description: 'Cabinet pluridisciplinaire à Casablanca. Orthophoniste, Psychologue et Psychomotricienne.',
+    title: "Le Cabinet - Cabinet d'orthophonie Centre ville",
+    description: "Cabinet d'orthophonie Centre ville à Casablanca. Orthophoniste, Psychologue et Psychomotricienne.",
   }
 };
 
@@ -346,7 +346,7 @@ export default function LeCabinet() {
 
                   <div className="border-t border-gray-300 pt-6">
                     <a
-                      href="https://maps.app.goo.gl/UZYhYESKLgGYDV866"
+                      href="https://share.google/ISsWYzdE3WCNcYi2X"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-primary-700 transition-colors shadow-lg hover:shadow-xl"
@@ -381,14 +381,14 @@ export default function LeCabinet() {
               {/* Google Maps Embed */}
               <div className="rounded-3xl overflow-hidden shadow-2xl h-[500px]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.7799999999997!2d-7.6204!3d33.5941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM1JzM4LjgiTiA3wrAzNycxMy40Ilc!5e0!3m2!1sfr!2sma!4v1234567890"
+                  src="https://www.google.com/maps?q=33.594152,-7.620405&z=17&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Localisation Cabinet Centre Ville"
+                  title="Localisation Cabinet d'orthophonie Centre ville"
                 ></iframe>
               </div>
             </div>
@@ -405,7 +405,7 @@ export default function LeCabinet() {
             </h2>
             <div className="space-y-6 text-gray-700 leading-relaxed">
               <p>
-                Au Cabinet Centre Ville, nous privilégions une <strong>approche pluridisciplinaire</strong> 
+                Au Cabinet d&apos;orthophonie Centre ville, nous privilégions une <strong>approche pluridisciplinaire</strong> 
                 qui permet de croiser les regards et les expertises. Cette coordination entre 
                 orthophoniste, psychologue et psychomotricienne garantit une prise en charge 
                 cohérente et complète.

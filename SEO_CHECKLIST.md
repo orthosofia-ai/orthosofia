@@ -53,7 +53,7 @@ Guide complet pour optimiser votre référencement sur Google Maroc.
 
 1. **Créer/Optimiser votre fiche GMB:**
    - [business.google.com](https://business.google.com)
-   - Nom exact: "Cabinet Pluridisciplinaire Centre Ville"
+   - Nom exact: "Cabinet d'orthophonie Centre ville"
    - Catégorie principale: "Orthophoniste"
    - Catégories secondaires: "Psychologue", "Centre de santé"
    - Description complète (750 caractères max)
@@ -107,7 +107,7 @@ Inscrivez-vous sur:
 
 **Cohérence NAP (Name, Address, Phone):**
 - Utilisez EXACTEMENT les mêmes informations partout
-- Nom: Cabinet Pluridisciplinaire Centre Ville
+- Nom: Cabinet d'orthophonie Centre ville
 - Adresse: [Adresse exacte] Centre-Ville, Casablanca
 - Téléphone: 0654182804
 

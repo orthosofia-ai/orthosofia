@@ -18,18 +18,22 @@ export interface BlogPost {
 const DATA_DIR = path.join(process.cwd(), 'data');
 const BLOG_FILE = path.join(DATA_DIR, 'blog-posts.json');
 
-// Ensure data directory exists
-if (!fs.existsSync(DATA_DIR)) {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
-}
-
-// Initialize blog file if it doesn't exist
-if (!fs.existsSync(BLOG_FILE)) {
-  fs.writeFileSync(BLOG_FILE, JSON.stringify([], null, 2));
+function ensureStore() {
+  try {
+    if (!fs.existsSync(DATA_DIR)) {
+      fs.mkdirSync(DATA_DIR, { recursive: true });
+    }
+    if (!fs.existsSync(BLOG_FILE)) {
+      fs.writeFileSync(BLOG_FILE, JSON.stringify([], null, 2));
+    }
+  } catch {
+    // Read-only environments (e.g. some serverless hosts) skip writes.
+  }
 }
 
 export function getAllPosts(): BlogPost[] {
   try {
+    ensureStore();
     const data = fs.readFileSync(BLOG_FILE, 'utf-8');
     return JSON.parse(data);
   } catch (error) {
@@ -58,6 +62,7 @@ export function savePost(post: BlogPost): void {
     posts.push(post);
   }
   
+  ensureStore();
   fs.writeFileSync(BLOG_FILE, JSON.stringify(posts, null, 2));
 }
 

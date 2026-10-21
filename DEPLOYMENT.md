@@ -31,7 +31,7 @@ git push -u origin main
 3. Cliquez sur "Add New Project"
 4. Sélectionnez votre repository `orthocasa`
 5. Configurez les variables d'environnement:
-   - `NEXT_PUBLIC_SITE_URL`: `https://www.orthophonistecasablanca.ma`
+   - `NEXT_PUBLIC_SITE_URL`: `https://www.orthophonistecentreville.com`
    - `NEXT_PUBLIC_GOOGLE_PLACE_ID`: Votre Place ID Google
 6. Cliquez sur "Deploy"
 
@@ -40,7 +40,7 @@ git push -u origin main
 ### Étape 3: Configurer le Domaine Personnalisé
 
 1. Dans Vercel, allez dans Settings > Domains
-2. Ajoutez votre domaine: `orthophonistecasablanca.ma`
+2. Ajoutez votre domaine: `orthophonistecentreville.com`
 3. Suivez les instructions pour configurer les DNS:
 
 **Chez votre registrar de domaine (ex: ma-domains.ma):**
@@ -65,11 +65,11 @@ Value: cname.vercel-dns.com
 Pour apparaître dans les résultats de recherche Google:
 
 1. Allez sur [search.google.com/search-console](https://search.google.com/search-console)
-2. Ajoutez votre propriété: `https://www.orthophonistecasablanca.ma`
+2. Ajoutez votre propriété: `https://www.orthophonistecentreville.com`
 3. Vérifiez la propriété:
    - Option 1: Balise HTML (déjà préparée dans le code)
    - Option 2: DNS TXT record
-4. Soumettez votre sitemap: `https://www.orthophonistecasablanca.ma/sitemap.xml`
+4. Soumettez votre sitemap: `https://www.orthophonistecentreville.com/sitemap.xml`
 
 ### 2. Google My Business - Intégration Complète
 
@@ -87,7 +87,7 @@ Pour apparaître dans les résultats de recherche Google:
 1. Connectez-vous à [business.google.com](https://business.google.com)
 2. Sélectionnez votre établissement
 3. Allez dans "Info" > "Site web"
-4. Ajoutez: `https://www.orthophonistecasablanca.ma`
+4. Ajoutez: `https://www.orthophonistecentreville.com`
 5. Dans "Services", ajoutez tous vos services
 
 ### 3. Configuration des Emails du Formulaire de Contact
@@ -116,8 +116,8 @@ export async function POST(request: NextRequest) {
 
   try {
     await resend.emails.send({
-      from: 'contact@orthophonistecasablanca.ma',
-      to: 'contact@orthophonistecasablanca.ma',
+      from: 'contact@orthophonistecentreville.com',
+      to: 'contact@orthophonistecentreville.com',
       subject: `Nouveau message: ${subject}`,
       html: `
         <h2>Nouveau message depuis le site web</h2>
@@ -252,7 +252,7 @@ Avant de lancer:
 En cas de problème:
 - Documentation Vercel: [vercel.com/docs](https://vercel.com/docs)
 - Documentation Next.js: [nextjs.org/docs](https://nextjs.org/docs)
-- Email: contact@orthophonistecasablanca.ma
+- Email: contact@orthophonistecentreville.com
 
 ## 💰 Coûts
 

@@ -11,7 +11,7 @@ Guide pour gérer le contenu de votre site web.
 ```typescript
 export const siteConfig = {
   phone: '0654182804',        // Modifiez ici
-  email: 'contact@orthophonistecasablanca.ma', // Modifiez ici
+  email: 'contact@orthophonistecentreville.com', // Modifiez ici
   address: {
     streetAddress: 'Centre-Ville',  // Adresse précise
     addressLocality: 'Casablanca',
@@ -312,7 +312,7 @@ npm run build
 ## 📞 Besoin d'Aide ?
 
 Pour toute modification complexe ou personnalisation avancée:
-- Email: contact@orthophonistecasablanca.ma
+- Email: contact@orthophonistecentreville.com
 - Consultez la documentation Next.js: [nextjs.org/docs](https://nextjs.org/docs)
 
 ## ✅ Checklist Maintenance Mensuelle

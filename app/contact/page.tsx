@@ -20,19 +20,30 @@ export default function Contact() {
     setSubmitting(true);
     setMessage('');
 
-    // In production, this would send to your email service or backend
-    // For now, we'll just simulate a successful submission
-    setTimeout(() => {
-      setMessage('Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: 'Demande de rendez-vous',
-        message: ''
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
       });
+
+      if (response.ok) {
+        setMessage('Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: 'Demande de rendez-vous',
+          message: ''
+        });
+      } else {
+        setMessage('Une erreur est survenue. Vous pouvez aussi nous écrire sur WhatsApp.');
+      }
+    } catch {
+      setMessage('Une erreur est survenue. Vous pouvez aussi nous écrire sur WhatsApp.');
+    } finally {
       setSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -77,14 +88,14 @@ export default function Contact() {
 
             {/* Email */}
             <a
-              href="mailto:contact@orthophonistecasablanca.ma"
+              href="mailto:contact@orthophonistecentreville.com"
               className="bg-gradient-to-br from-secondary-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-center group"
             >
               <div className="bg-secondary-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                 <FaEnvelope className="text-3xl text-white" />
               </div>
               <h3 className="text-lg font-bold mb-2 text-gray-900">Email</h3>
-              <p className="text-secondary-600 font-semibold text-sm break-all">contact@orthophonistecasablanca.ma</p>
+              <p className="text-secondary-600 font-semibold text-sm break-all">contact@orthophonistecentreville.com</p>
             </a>
 
             {/* Address */}
@@ -237,11 +248,11 @@ export default function Contact() {
                   <div className="space-y-3 text-gray-700">
                     <div className="flex justify-between py-2 border-b border-gray-200">
                       <span className="font-semibold">Lundi - Vendredi</span>
-                      <span>Sur rendez-vous</span>
+                      <span>9h – 18h</span>
                     </div>
                     <div className="flex justify-between py-2 border-b border-gray-200">
                       <span className="font-semibold">Samedi</span>
-                      <span>Sur rendez-vous</span>
+                      <span>9h – 18h</span>
                     </div>
                     <div className="flex justify-between py-2">
                       <span className="font-semibold">Dimanche</span>
@@ -300,7 +311,7 @@ export default function Contact() {
                     </p>
                   </div>
                   <a
-                    href="https://maps.app.goo.gl/UZYhYESKLgGYDV866"
+                    href="https://share.google/ISsWYzdE3WCNcYi2X"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-primary-700 transition-colors w-full justify-center"

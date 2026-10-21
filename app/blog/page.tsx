@@ -6,7 +6,7 @@ import { getPublishedPosts } from '@/lib/blog';
 import Hero from '@/components/sections/Hero';
 
 export const metadata: Metadata = {
-  title: 'Blog - Conseils en Orthophonie et Développement | Cabinet Centre Ville',
+  title: "Blog - Conseils en orthophonie | Cabinet d'orthophonie Centre ville",
   description: 'Découvrez nos articles et conseils d\'experts sur l\'orthophonie, la psychologie et la psychomotricité. Informations et astuces pour accompagner votre enfant.',
   keywords: [
     'blog orthophonie',

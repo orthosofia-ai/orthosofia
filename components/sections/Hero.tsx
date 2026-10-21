@@ -50,7 +50,7 @@ export default function Hero({
             bulletClass: 'swiper-pagination-bullet !bg-white/60',
             bulletActiveClass: 'swiper-pagination-bullet-active !bg-white',
           }}
-          loop={true}
+          loop={slideImages.length > 1}
           className="w-full h-full"
         >
           {slideImages.map((image, index) => (

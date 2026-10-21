@@ -68,11 +68,11 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <StructuredData />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.svg" />
         <meta name="geo.region" content="MA-CAS" />
         <meta name="geo.placename" content="Casablanca" />
-        <meta name="geo.position" content="33.5731;-7.5898" />
-        <meta name="ICBM" content="33.5731, -7.5898" />
+        <meta name="geo.position" content="33.594152;-7.620405" />
+        <meta name="ICBM" content="33.594152, -7.620405" />
       </head>
       <body className={inter.className}>
         <Header />

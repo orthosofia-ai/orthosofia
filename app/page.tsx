@@ -77,9 +77,9 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <Hero
-        title="Cabinet Pluridisciplinaire Centre-Ville"
-        subtitle="Bienvenue au Cabinet Centre Ville"
-        description="Accompagnement pluridisciplinaire pour enfants, adolescents et adultes. Orthophonie, Psychologie et Psychomotricité à Casablanca."
+        title="Cabinet d'orthophonie Centre ville"
+        subtitle="Bienvenue sur orthophonistecentreville.com"
+        description="Cabinet d'orthophonie à Casablanca : orthophonie, psychologie et psychomotricité pour enfants, adolescents et adultes."
         ctaText="Prendre Rendez-vous"
         ctaLink="/contact"
         images={[
@@ -603,7 +603,7 @@ export default function Home() {
                 <div className="relative p-1 bg-gradient-to-br from-primary-500 via-secondary-500 to-primary-600 rounded-2xl max-w-md mx-auto lg:mx-0">
                   <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
             <Image
-                      src="/sofia.jpg"
+                      src="/sofia.svg"
                       alt="Madame Sofia EL FENE - Orthophoniste"
                       fill
                       className="object-cover object-top"
@@ -686,17 +686,16 @@ export default function Home() {
                 
                 <div className="text-center">
                   <div className="text-5xl font-bold text-gray-900 mb-1">5.0</div>
-                  <p className="text-gray-600 font-medium">Basé sur plus de 50+ avis</p>
+                  <p className="text-gray-600 font-medium">Basé sur 30 avis Google</p>
                 </div>
                 
-                {/* CTA Button */}
                 <a 
-                  href="https://share.google/7cz4Z2jl29VlvHRNO" 
+                  href="https://share.google/ISsWYzdE3WCNcYi2X" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="mt-6 inline-flex items-center gap-3 bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-8 py-4 rounded-full font-bold hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                 >
-                  Laissez-nous un avis
+                  Voir notre fiche Google
                   <FaStar className="text-xl" />
                 </a>
               </div>
@@ -724,7 +723,7 @@ export default function Home() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <a 
-                href="https://maps.app.goo.gl/UZYhYESKLgGYDV866"
+                href="https://share.google/ISsWYzdE3WCNcYi2X"
             target="_blank"
             rel="noopener noreferrer"
                 className="group bg-white/10 backdrop-blur-sm rounded-3xl p-8 text-center hover:bg-white hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-white/20 block"
@@ -746,8 +745,8 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-primary-600 transition-colors">Horaires</h3>
                 <p className="text-primary-100 group-hover:text-gray-600 transition-colors text-lg">
-                  Du lundi au samedi<br />
-                  Sur rendez-vous
+                  Lundi – Samedi<br />
+                  9h – 18h
                 </p>
               </div>
 

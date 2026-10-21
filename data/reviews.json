@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "author": "Parent d'un patient",
+    "rating": 5,
+    "comment": "Super expérience, merci pour tous les efforts fournis avec mon fils.",
+    "date": "2025-12-10T10:00:00.000Z",
+    "verified": true
+  },
+  {
+    "id": "2",
+    "author": "Maman d'une patiente",
+    "rating": 5,
+    "comment": "Excellent cabinet. J'ai fait le bilan de ma fille : vraiment bien orientée, on dit les choses clairement.",
+    "date": "2025-12-08T10:00:00.000Z",
+    "verified": true
+  },
+  {
+    "id": "3",
+    "author": "Famille",
+    "rating": 5,
+    "comment": "J'ai fait 10 séances pour ma sœur qui bégaie. Elle bégaie rarement maintenant. Je recommande cette orthophoniste.",
+    "date": "2023-05-12T10:00:00.000Z",
+    "verified": true
+  },
+  {
+    "id": "4",
+    "author": "Patient",
+    "rating": 5,
+    "comment": "Un très bon cabinet. Mme Sofia Elfenne est parmi les meilleures orthophonistes que je connaisse.",
+    "date": "2023-05-03T10:00:00.000Z",
+    "verified": true
+  }
+]

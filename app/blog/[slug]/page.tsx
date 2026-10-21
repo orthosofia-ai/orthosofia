@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: `${post.title} | Blog Cabinet Centre Ville`,
+    title: `${post.title} | Blog Orthophoniste Centre Ville`,
     description: post.excerpt,
     keywords: post.keywords,
     openGraph: {
@@ -51,7 +51,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     datePublished: post.date,
     dateModified: post.date,
     author: post.author,
-    url: `https://www.orthophonistecasablanca.ma/blog/${post.slug}`,
+    url: `https://www.orthophonistecentreville.com/blog/${post.slug}`,
   });
 
   return (

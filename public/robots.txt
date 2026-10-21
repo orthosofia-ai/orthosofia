@@ -1,8 +1,5 @@
-# *
 User-agent: *
 Allow: /
 Disallow: /api/
 
-# Sitemap
-Sitemap: https://www.orthophonistecasablanca.ma/sitemap.xml
-
+Sitemap: https://www.orthophonistecentreville.com/sitemap.xml

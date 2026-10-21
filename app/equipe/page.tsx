@@ -5,10 +5,10 @@ import Hero from '@/components/sections/Hero';
 import CTASection from '@/components/sections/CTASection';
 
 export const metadata: Metadata = {
-  title: 'L\'Équipe - Cabinet Orthophonie Casablanca',
+  title: "L'Équipe - Cabinet d'orthophonie Centre ville",
   description: 'Rencontrez notre équipe de professionnels qualifiés : orthophoniste, psychologue et psychomotricienne. Sofia EL FENE et son équipe à Casablanca.',
   openGraph: {
-    title: 'L\'Équipe - Cabinet Orthophonie Casablanca',
+    title: "L'Équipe - Cabinet d'orthophonie Centre ville",
     description: 'Équipe pluridisciplinaire qualifiée à Casablanca',
   }
 };
@@ -59,7 +59,7 @@ export default function Equipe() {
                   <div className="relative p-1 bg-gradient-to-br from-primary-500 via-secondary-500 to-primary-600 rounded-2xl">
                     <div className="relative h-[400px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
                       <Image
-                        src="/sofia.jpg"
+                        src="/sofia.svg"
                         alt="Sofia EL FENE - Orthophoniste Casablanca"
                         fill
                         className="object-cover object-top"

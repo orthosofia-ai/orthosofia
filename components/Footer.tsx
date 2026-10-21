@@ -1,36 +1,35 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebook, FaInstagram, FaGoogle } from 'react-icons/fa';
+import { siteConfig } from '@/lib/seo';
 
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-300 relative overflow-hidden">
-      {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-primary-600 rounded-full opacity-5 -ml-32 -mt-32"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary-600 rounded-full opacity-5 -mr-48 -mb-48"></div>
       
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* About */}
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="relative w-12 h-12">
                 <Image
-                  src="/logo.jpg"
-                  alt="Cabinet Centre Ville Logo"
+                  src="/logo.svg"
+                  alt={siteConfig.name}
                   fill
                   className="object-contain"
                 />
               </div>
-              <h3 className="text-white text-xl font-bold">Cabinet Centre Ville</h3>
+              <h3 className="text-white text-xl font-bold leading-tight">{siteConfig.shortName}</h3>
             </div>
             <p className="text-sm leading-relaxed mb-6 text-gray-400">
-              Cabinet pluridisciplinaire à Casablanca offrant des services d&apos;orthophonie, 
-              psychologie et psychomotricité pour enfants, adolescents et adultes.
+              {siteConfig.name} à Casablanca : orthophonie, psychologie et psychomotricité
+              pour enfants, adolescents et adultes.
             </p>
             <div className="flex gap-3">
               <a 
-                href="https://www.facebook.com/share/1G8rLLtkJ3/?mibextid=wwXIfr" 
+                href={siteConfig.socialMedia.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
@@ -39,7 +38,7 @@ export default function Footer() {
                 <FaFacebook className="text-lg" />
               </a>
               <a 
-                href="https://www.instagram.com/cabinet_orthophonie_sofia?igsh=bmdwaHdsa2ZvazRp" 
+                href={siteConfig.socialMedia.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 hover:bg-pink-600 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
@@ -47,10 +46,18 @@ export default function Footer() {
               >
                 <FaInstagram className="text-lg" />
               </a>
+              <a
+                href={siteConfig.googleListingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gray-800 hover:bg-[#4285F4] rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                aria-label="Fiche Google"
+              >
+                <FaGoogle className="text-lg" />
+              </a>
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="text-white text-xl font-bold mb-6 flex items-center gap-2">
               <span className="w-1 h-6 bg-primary-600 rounded-full"></span>
@@ -58,8 +65,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="hover:text-primary-400 transition-colors flex items-center gap-2 group">
-                  <span className="w-1.5 h-1.5 bg-primary-600 rounded-full group-hover:w-2 transition-all"></span>
+                <Link href="/" className="hover:text-primary-400 transition-colors">
                   Accueil
                 </Link>
               </li>
@@ -76,6 +82,11 @@ export default function Footer() {
               <li>
                 <Link href="/prises-en-charge" className="hover:text-white transition-colors">
                   Nos Prises en Charge
+                </Link>
+              </li>
+              <li>
+                <Link href="/questions-conseils" className="hover:text-white transition-colors">
+                  Questions &amp; Conseils
                 </Link>
               </li>
               <li>
@@ -96,7 +107,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
           <div>
             <h3 className="text-white text-xl font-bold mb-6 flex items-center gap-2">
               <span className="w-1 h-6 bg-secondary-600 rounded-full"></span>
@@ -113,7 +123,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h3 className="text-white text-xl font-bold mb-6 flex items-center gap-2">
               <span className="w-1 h-6 bg-primary-600 rounded-full"></span>
@@ -125,7 +134,7 @@ export default function Footer() {
                   <FaMapMarkerAlt className="text-primary-400 group-hover:text-white transition-colors" />
                 </div>
                 <a 
-                  href="https://maps.app.goo.gl/UZYhYESKLgGYDV866"
+                  href={siteConfig.googleListingUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-gray-400 mt-2 hover:text-primary-400 transition-colors"
@@ -139,16 +148,16 @@ export default function Footer() {
                 <div className="w-10 h-10 bg-primary-600/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary-600 transition-colors">
                   <FaPhone className="text-primary-400 group-hover:text-white transition-colors" />
                 </div>
-                <a href="tel:0654182804" className="text-sm text-gray-400 hover:text-white transition-colors">
-                  0654 18 28 04
+                <a href={`tel:${siteConfig.phone}`} className="text-sm text-gray-400 hover:text-white transition-colors">
+                  {siteConfig.phoneDisplay}
                 </a>
               </li>
               <li className="flex items-center gap-3 group">
                 <div className="w-10 h-10 bg-primary-600/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary-600 transition-colors">
                   <FaEnvelope className="text-primary-400 group-hover:text-white transition-colors" />
                 </div>
-                <a href="mailto:contact@orthophonistecasablanca.ma" className="text-sm text-gray-400 hover:text-white transition-colors break-all">
-                  contact@orthophonistecasablanca.ma
+                <a href={`mailto:${siteConfig.email}`} className="text-sm text-gray-400 hover:text-white transition-colors break-all">
+                  {siteConfig.email}
                 </a>
               </li>
               <li className="flex items-start gap-3 group">
@@ -156,19 +165,18 @@ export default function Footer() {
                   <FaClock className="text-primary-400 group-hover:text-white transition-colors" />
                 </div>
                 <span className="text-sm text-gray-400 mt-2">
-                  Du lundi au samedi<br />
-                  Sur rendez-vous
+                  {siteConfig.openingHoursDisplay}<br />
+                  Dimanche fermé
                 </span>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="border-t border-gray-800/50 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-500">
-              © {new Date().getFullYear()} Cabinet Centre Ville. Tous droits réservés.
+              © {new Date().getFullYear()} {siteConfig.name}. Tous droits réservés.
             </p>
             <div className="flex gap-6 text-sm">
               <Link href="/mentions-legales" className="text-gray-500 hover:text-primary-400 transition-colors">
@@ -185,4 +193,3 @@ export default function Footer() {
     </footer>
   );
 }
-
